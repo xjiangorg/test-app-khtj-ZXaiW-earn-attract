@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-component-pcnp
+  namespace: build-e2e-afoz-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:91814d30346d12741c82d4b425ead1ac614368b3e2eab13d6862c67e0d1ae408
+        name: my-python
+        resources: {}
+status: {}
